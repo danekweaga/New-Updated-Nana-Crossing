@@ -103,6 +103,15 @@ public class App extends Application
                 stage.sizeToScene();
             }
         });
+        
+        //Set up settings button listener in the HomeScreen class
+        scene.homeScreen.setB.setOnMouseClicked(e->
+        {
+            //play a click sound effect
+            scene.gameScreen.click.seek(scene.gameScreen.click.getStartTime());
+            scene.gameScreen.click.play();
+            scene.homeScreen.setFunc();
+        });
     }
    
     //Mutator methods to set the instance data of the class
