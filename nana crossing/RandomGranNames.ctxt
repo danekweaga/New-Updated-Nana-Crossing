@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=RandomGranNames
+comment0.text=\r\n\ @title\ RandomGranNames\r\n\ The\ Game\ class\ contains\ a\ differrent\ ways\ of\ saying\ grandma\ and\ a\ method\ to\ print\ a\ random\ one.\r\n\r\n\ @authors\ Chukwunonso\ Ekweaga,\ Ashlee\ Muichirahondo\ and\ Alamin\ Adeleke\r\n
+comment1.params=
+comment1.target=java.lang.String\ out()
+comment1.text=\r\n\ Method\ to\ get\ a\ granny\ name\r\n\ @return\ a\ random\ Granny\ from\ the\ NAMES\ array.\r\n
+numComments=2
