@@ -26,12 +26,20 @@ public class HomeScreen extends Pane
 {
     protected ImageView BG = new ImageView(new Image("/assets/BG.png"));
     protected ImageView playB = new ImageView(new Image("/assets/play.png"));
+    protected ImageView setB = new ImageView(new Image("/assets/settings.png"));
+    protected ImageView doneB = new ImageView(new Image("/assets/done.png"));
     
     protected Text t1 = new Text(30,190, "Type your \nnana's name");
     protected Text t2 = new Text(370,185, "Probability Difference\n(5% recomended)");
     protected Text t3 = new Text(370,253, "Reward per Lane\n(100 Recomended)");
     protected Text t4 = new Text(440,230, "%");
     protected Text t5 = new Text(436,290, "VBucks");
+    protected Text t6 = new Text(400,299, "Settings");
+    
+    protected Rectangle holder1,holder2;
+     
+    protected Media clickSound = new Media(getClass().getResource("/assets/sounds/click.mp3").toExternalForm());
+    protected MediaPlayer click = new MediaPlayer(clickSound);
     
     //Textfields to input App data
     protected TextField nameField = new TextField("");
@@ -90,19 +98,50 @@ public class HomeScreen extends Pane
         payField.setLayoutY(275);
         payField.setPrefWidth(65);
         
-        Rectangle holder1 = new Rectangle(360,170,120,140);
+        holder1 = new Rectangle(360,170,120,140);
         holder1.setOpacity(0.75);
         holder1.setArcWidth(20);
         holder1.setArcHeight(20);
         holder1.setFill(Color.CORNFLOWERBLUE.darker());
-        Rectangle holder2 = new Rectangle(20,170,120,140);
+        holder2 = new Rectangle(20,170,120,140);
         holder2.setOpacity(0.75);
         holder2.setArcWidth(20);
         holder2.setArcHeight(20);
         holder2.setFill(Color.CORNFLOWERBLUE.darker());
         
-        this.getChildren().addAll(BG, holder1, holder2, t1, t2, t3, t4, t5, nameField, oddsField, payField, playB);
+        setB.setLayoutX(368);
+        setB.setLayoutY(190);
+        setB.setFitWidth(100);
+        setB.setFitHeight(90);
+        //Animation
+        glow(setB);
+        
+        this.getChildren().addAll(BG,holder1 ,holder2, t1, nameField,playB,setB,t6);
     }
+    
+    /***********************************************
+     * Method that displays game settings
+     * 
+     * Displays the settings for the game
+     **********************************************/
+    public void setFunc()
+    {
+        this.getChildren().clear();
+        this.getChildren().addAll(BG, holder1 , holder2, t1, t2, t3, t4, t5, nameField, oddsField, payField, playB,doneB);
+        doneB.setLayoutX(368);
+        doneB.setLayoutY(289);
+        doneB.setFitWidth(100);
+        doneB.setFitHeight(100);
+        glow(doneB);//400,299
+        doneB.setOnMouseClicked(e->
+        {
+            click.seek(click.getStartTime());
+            click.play();
+            this.getChildren().clear();
+            this.getChildren().addAll(BG,holder1 ,holder2, t1, nameField,playB,setB,t6);
+        });
+    }
+    
     
     /****************************************************************************************
      * Method that handles the switching from one track to the other 
