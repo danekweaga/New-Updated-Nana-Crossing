@@ -9,21 +9,19 @@ import javafx.scene.paint.Color;
 import javafx.scene.control.TextField;
 import javafx.scene.effect.Glow;
 import javafx.scene.text.Font;
-
-
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
-/**********************************************************************************************************
+/*****************************************************************************************************************
  * @title The HomeScreen class.
  * A pane containing a input fields(for odds of success and pay for each succesful crossing) and a  play button
  * 
  * @author Alamn Adeleke, Chukwunonso Ekweaga, Ashlee Muchirahondo
  * @version version 1 
- **********************************************************************************************************/
+ ****************************************************************************************************************/
 public class HomeScreen extends Pane
 {
     protected ImageView BG = new ImageView(new Image("/assets/BG.png"));
@@ -42,10 +40,15 @@ public class HomeScreen extends Pane
     
     // List of music file paths
     protected List<String> musicFiles = new ArrayList<>(); 
+    
     // MediaPlayer for background music
     protected static  MediaPlayer mediaPlayer; 
+
     // Index of the current track
     protected int currentTrackIndex = 0; 
+    
+    // Random Grandmother names
+    protected RandomGranNames names;
 
     /************************************************************************
      *Default constructor for HomeScreen
@@ -55,6 +58,7 @@ public class HomeScreen extends Pane
         draw();
         // Load background music
         loadMusicFiles("assets/sounds/background music");     
+        nameField.setText(names.out());
     }
     
     /*************************************************************
