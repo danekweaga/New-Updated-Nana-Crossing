@@ -10,13 +10,13 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.animation.TranslateTransition;
 import javafx.util.Duration;
-/*********************************************************************************
+/**********************************************************************************************
  * @title The MainView Class
  * A pane consisting of a winning screen, a loosing screen, and the main game view
  *
  * @author Alamn Adeleke, Chukwunonso Ekweaga, Ashlee Muchirahondo
  * @version 1
- *********************************************************************************/
+ *******************************************************************************************/
 public class MainView extends Pane
 {
     //Create the lanes of the main game view
@@ -131,10 +131,13 @@ public class MainView extends Pane
     {
         TranslateTransition walk = new TranslateTransition();
         
-        walk.setDuration(Duration.seconds(0.1)); // duration of one move
+        // duration of one move
+        walk.setDuration(Duration.seconds(0.1)); 
         walk.setCycleCount(0);
+        // Make it move back and forth
         walk.setAutoReverse(false); // Make it move back and forth
-        walk.setNode(nana); // Apply the transition to the rectangle
+        // Apply the transition to the rectangle
+        walk.setNode(nana); 
         walk.setByX(distance * -1);
         walk.play();
     }
@@ -145,10 +148,13 @@ public class MainView extends Pane
      ***********************************************************/       
     public void walk(ImageView nana)
     {
-        walk.setDuration(Duration.seconds(0.3)); // duration of one move
+        // duration of one move
+        walk.setDuration(Duration.seconds(0.3)); 
         walk.setCycleCount(0);
-        walk.setAutoReverse(false); // Make it move 
-        walk.setNode(nana); // Apply the transition to nana
+         // Make it move 
+        walk.setAutoReverse(false);
+        // Apply the transition to nana
+        walk.setNode(nana); 
         walk.setByX(91);
     }
 }
