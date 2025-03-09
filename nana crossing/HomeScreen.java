@@ -30,7 +30,7 @@ public class HomeScreen extends Pane
     protected ImageView doneB = new ImageView(new Image("/assets/done.png"));
     
     protected Text t1 = new Text(30,190, "Type your \nnana's name");
-    protected Text t2 = new Text(370,185, "Probability Difference\n(5% recomended)");
+    protected Text t2 = new Text(370,185, "Probability Difference\n(3% recomended)");
     protected Text t3 = new Text(370,253, "Reward per Lane\n(100 Recomended)");
     protected Text t4 = new Text(440,230, "%");
     protected Text t5 = new Text(436,290, "VBucks");
@@ -43,7 +43,7 @@ public class HomeScreen extends Pane
     
     //Textfields to input App data
     protected TextField nameField = new TextField("");
-    protected TextField oddsField = new TextField("5");
+    protected TextField oddsField = new TextField("3");
     protected TextField payField = new TextField("125"); 
     
     // List of music file paths
