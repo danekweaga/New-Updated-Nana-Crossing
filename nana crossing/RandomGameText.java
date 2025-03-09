@@ -110,7 +110,7 @@ public class RandomGameText
         " got hit by a watermelon… and it was fatal!",
         " lost so hard, the credits started rolling!",
         " got folded like a lawn chair!",
-        " took the biggest L in gaming history!"
+        " took the biggest L in gaming history!",
         " got rear-ended by a freight train! Game over!",
         " crashed into a brick wall—guess that was the wrong turn!",
         " got flattened by a monster truck! Looks like pavement now!",
