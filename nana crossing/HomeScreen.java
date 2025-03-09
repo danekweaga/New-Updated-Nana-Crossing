@@ -55,8 +55,7 @@ public class HomeScreen extends Pane
     // Index of the current track
     protected int currentTrackIndex = 0; 
     
-    // Random Grandmother names
-    protected RandomGameText names;
+
 
     /************************************************************************
      *Default constructor for HomeScreen
@@ -66,7 +65,7 @@ public class HomeScreen extends Pane
         draw();
         // Load background music
         loadMusicFiles("assets/sounds/background music");     
-        nameField.setText(names.getGranName());
+        nameField.setText(RandomGameText.getGranName());
     }
     
     /*************************************************************
