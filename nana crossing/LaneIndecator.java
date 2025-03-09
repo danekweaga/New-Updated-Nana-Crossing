@@ -42,7 +42,7 @@ public class LaneIndecator extends Pane
             //Customize the rectangle
             r[i].setStrokeWidth(1);
             r[i].setStroke(Color.BLACK);
-            r[i].setFill(Color.CYAN.darker());
+            r[i].setFill(Color.rgb(115, 168,212));
             
             //Add to the class
             this.getChildren().add(r[i]);
@@ -64,7 +64,7 @@ public class LaneIndecator extends Pane
             //Turn all "off"
             for(int i = 0 ; i <9 ; i++)
             {
-                r[i].setFill(Color.DARKCYAN.darker());
+                r[i].setFill(Color.rgb(115, 168,212));
             }
             //then turn that which matches the input "on"
             r[lane].setFill(Color.LIGHTCYAN);

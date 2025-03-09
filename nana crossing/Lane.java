@@ -148,8 +148,8 @@ public class Lane extends Pane
         topBlock.setEffect(glow);
         bottomBlock.setEffect(glow);
         
-        topBlock.setFill(Color.BLUE);
-        bottomBlock.setFill(Color.BLUE);
+        topBlock.setFill(Color.rgb(115, 168,212));
+        bottomBlock.setFill(Color.rgb(115, 168,212));
     }
     
     public void unglow()
@@ -159,7 +159,7 @@ public class Lane extends Pane
         topBlock.setEffect(glow);
         bottomBlock.setEffect(glow);
         
-        topBlock.setFill(Color.BLUE.darker());
-        bottomBlock.setFill(Color.BLUE.darker());
+        topBlock.setFill(Color.rgb(115, 168,212));
+        bottomBlock.setFill(Color.rgb(115, 168,212));
     }
 }
