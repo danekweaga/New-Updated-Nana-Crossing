@@ -66,7 +66,7 @@ public class HomeScreen extends Pane
         draw();
         // Load background music
         loadMusicFiles("assets/sounds/background music");     
-        nameField.setText(names.out());
+        nameField.setText(names.getGranName());
     }
     
     /*************************************************************
