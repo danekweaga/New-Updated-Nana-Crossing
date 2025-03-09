@@ -7,6 +7,7 @@ import java.util.Random;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.transform.Rotate;
+import javafx.scene.effect.Glow;
 
 /*************************************************************************************
  * @title The Lane Class.
@@ -27,6 +28,7 @@ public class Lane extends Pane
     protected int x;
     protected double laneHeight = 384;
     protected double carHeight = 50;
+    protected int laneNum;
     
     //nodes used in the lane
     protected ImageView road;
@@ -35,19 +37,24 @@ public class Lane extends Pane
     protected ImageView car2;
     protected ImageView end;
     
+    Rectangle topBlock = new Rectangle(x, y, 112, 50);
+    Rectangle bottomBlock = new Rectangle(x, y + 334, 112, 50);
+    
     /*******************************************************************
      * Constructor with parameters for Lane
      * 
      * @param y The y-coordinate of the lane
      * @param x The x-coordinate of the lane
      ********************************************************************/
-    public Lane(int y, int x)
+    public Lane(int y, int x, int laneNum)
     {
         //initialising images
         road = new ImageView(new Image("/assets/road.png"));
         side = new ImageView(new Image("/assets/side.png"));
         car1 = new ImageView(new Image(cars[rNG.nextInt(cars.length)]));
-        car2 = new ImageView(new Image(cars[rNG.nextInt(6)]));
+        car2 = new ImageView(new Image(cars[rNG.nextInt(cars.length)]));
+        
+        this.laneNum = laneNum;
         
         draw();
         //Add animations to the car
@@ -61,28 +68,29 @@ public class Lane extends Pane
     public void draw()
     {
         //Set the size positions of all the assets of the lane
-        road.setX(x+30);
+        road.setX(x+40);
         road.setY(y);
         road.setFitHeight(laneHeight);
-        road.setFitWidth(64);
+        road.setFitWidth(72);
         
         side.setX(x);
         side.setY(y);
         side.setFitHeight(laneHeight);
-        side.setFitWidth(30.5);
-        car1.setX(x+30);
+        side.setFitWidth(40);
+        
+        car1.setX(x+42);
         car1.setY(y);
         car1.setFitHeight(carHeight);
         car1.setFitWidth(30);
         
-        car2.setX(x+62);
+        car2.setX(x+76);
         car2.setY(y);
         car2.setFitHeight(carHeight);
         car2.setFitWidth(30);
         //turn the car around
-        car2.getTransforms().add(new Rotate(180, 77, 25));
+        car2.getTransforms().add(new Rotate(180, 92, 25));
         
-        this.getChildren().addAll(road, side, car1, car2);
+        this.getChildren().addAll(road, side, car1, car2, topBlock, bottomBlock);
     }
     
     /*******************************************************************************************************
@@ -95,7 +103,7 @@ public class Lane extends Pane
         //Create a transition
         TranslateTransition transition = new TranslateTransition();
         //Duration set to a number with rng(multiple rng for wider range of possible speeds), to avoid having cars with same speed
-        transition.setDuration(Duration.seconds(0.5+ 0.22*(1+rNG.nextInt(3)*(2+rNG.nextInt(4)*(1+rNG.nextInt(3)))))); 
+        transition.setDuration(Duration.seconds(0.2+ (1.5 / (0.7*laneNum +1))*(2+rNG.nextInt(3)*(2+rNG.nextInt(3)*(2+rNG.nextInt(3)))))); 
         // Repeat indefinitely
         transition.setCycleCount(TranslateTransition.INDEFINITE); 
         // Make it move back and forth 
@@ -120,7 +128,7 @@ public class Lane extends Pane
         //Create a transition
         TranslateTransition transition = new TranslateTransition();
         //Duration set to a number with rng(multiple rng for wider range of possible speeds), to avoid having cars with same speed
-        transition.setDuration(Duration.seconds(0.5+ 0.15*(2+rNG.nextInt(4)*(2+rNG.nextInt(4)*(1+rNG.nextInt(4)))))); 
+        transition.setDuration(Duration.seconds(0.2+ (1.5 / (0.7*laneNum +1))*(2+rNG.nextInt(3)*(2+rNG.nextInt(3)*(2+rNG.nextInt(3)))))); 
         // Repeat indefinitely
         transition.setCycleCount(TranslateTransition.INDEFINITE); 
         // Make it move back and forth
@@ -131,5 +139,27 @@ public class Lane extends Pane
         
         //Play the animation
         transition.play();
+    }
+    
+    public void glow()
+    {
+        Glow glow = new Glow();
+        glow.setLevel(1); 
+        topBlock.setEffect(glow);
+        bottomBlock.setEffect(glow);
+        
+        topBlock.setFill(Color.BLUE);
+        bottomBlock.setFill(Color.BLUE);
+    }
+    
+    public void unglow()
+    {
+        Glow glow = new Glow();
+        glow.setLevel(0); 
+        topBlock.setEffect(glow);
+        bottomBlock.setEffect(glow);
+        
+        topBlock.setFill(Color.BLUE.darker());
+        bottomBlock.setFill(Color.BLUE.darker());
     }
 }

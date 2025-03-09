@@ -62,8 +62,8 @@ public class GameScreen extends Pane
         holder.setLayoutY(20);
         
         BG.setFitHeight(560);
-        BG.setFitWidth(955);
-        BG.setOpacity(0.7);
+        BG.setFitWidth(1100);
+        BG.setOpacity(0.8);
         
         //this.setPadding(new Insets(10));
         this.getChildren().addAll(BG, holder);
@@ -75,18 +75,14 @@ public class GameScreen extends Pane
     
     /************************************************************************************************
      * Method to update the output to that in the backend
-     * 
-     * This method displays the player's progress in the output pane.
      ************************************************************************************************/        
     public void update()
     {
         outputPane.setOutput(backEnd.getLane(), backEnd.getVBucks(), backEnd.getOdds());
         inputPane.reset.setDisable(!canReset());
+        lanes.setLane(backEnd.getLane());
     }
     
-    /************************************************************************************************
-     * Method to display input pane in the game
-     ************************************************************************************************/ 
     public Input getInput()
     {
         return inputPane;
@@ -110,9 +106,7 @@ public class GameScreen extends Pane
         return can;
     }
     
-    /**********************************************************************
-     *  Method to load horn sounds
-     **********************************************************************/   
+    //methods to play horn sounds randomly
     public void music()
     {
         // Load sound files into MediaPlayer objects
@@ -131,9 +125,6 @@ public class GameScreen extends Pane
         }
     }
     
-    /**********************************************************************
-     *  Method to start playing horn sounds
-     **********************************************************************/   
     public void startPlayingSounds() 
     {
         //only if the timeline is null, (to avoid multiple instances)
@@ -183,6 +174,7 @@ public class GameScreen extends Pane
     {        
         gameWon = false;
         lanes.setGame();
+        lanes.reset();
         canCross = true;
         inputPane.cross.setDisable(false);
         inputPane.cross.setOpacity(1.0);
@@ -217,7 +209,7 @@ public class GameScreen extends Pane
             click.play();
             //play nana walking animation
             lanes.walk.play();
-            lanes.distance += 91;
+            lanes.distance += 110;
             //go to the next lane
             backEnd.update();
             //If on the final lane

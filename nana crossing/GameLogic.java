@@ -91,7 +91,7 @@ public class GameLogic
     {
         boolean crossed;
         //if a random value(between 0 and 100) is within the range of 0 to the probability of success,
-        if(odds >= rNG.nextInt(100) + 1)
+        if((odds * 100) >= (rNG.nextInt(100) * 100) + 1)
         {
             //set output to success(true)
             crossed = true;

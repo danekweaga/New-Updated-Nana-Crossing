@@ -27,7 +27,8 @@ public class EndLane extends Lane
     
     //nodes used in the lane
     protected ImageView end;
-    
+    //Rectangle topBlock = new Rectangle(x, y, 55, 50);
+    //Rectangle bottomBlock = new Rectangle(x, y + 334, 55, 50);
     
     /*********************************************
      * Constructor with parameters for EndLane
@@ -37,7 +38,7 @@ public class EndLane extends Lane
      *********************************************/
     public EndLane(int y, int x)
     {
-        super(x,y);
+        super(x,y, 0);
         end = new ImageView(new Image("/assets/end.png"));
         
         //Set the size positions of the assets of the lane
@@ -46,8 +47,11 @@ public class EndLane extends Lane
         end.setFitHeight(laneHeight);
         end.setFitWidth(55);
         
+        topBlock.setWidth(55);
+        bottomBlock.setWidth(55);
+        
         this.getChildren().clear();
-        this.getChildren().add(end);
+        this.getChildren().addAll(end, topBlock, bottomBlock);
     }
     
 }

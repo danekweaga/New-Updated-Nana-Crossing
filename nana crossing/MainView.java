@@ -20,16 +20,16 @@ import javafx.util.Duration;
 public class MainView extends Pane
 {
     //Create the lanes of the main game view
-    protected Rectangle border = new Rectangle(-5,-8, 795, 400);
+    protected Rectangle border = new Rectangle(-5,-8, 945, 400);
     protected HBox lanes = new HBox(-3);
-    protected Lane l1 = new Lane(0,0);
-    protected Lane l2 = new Lane(0,0);
-    protected Lane l3 = new Lane(0,0);
-    protected Lane l4 = new Lane(0,0);
-    protected Lane l5 = new Lane(0,0);
-    protected Lane l6 = new Lane(0,0);
-    protected Lane l7 = new Lane(0,0);
-    protected Lane l8 = new Lane(0,0);
+    protected Lane l1 = new Lane(0, 0, 1);
+    protected Lane l2 = new Lane(0, 0, 2);
+    protected Lane l3 = new Lane(0, 0, 3);
+    protected Lane l4 = new Lane(0, 0, 4);
+    protected Lane l5 = new Lane(0, 0, 5);
+    protected Lane l6 = new Lane(0, 0, 6);
+    protected Lane l7 = new Lane(0, 0, 7);
+    protected Lane l8 = new Lane(0, 0, 8);
     
     //Special lane in the last lane
     protected EndLane l9 = new EndLane(0,0);
@@ -65,10 +65,10 @@ public class MainView extends Pane
         
         //
         nana = new ImageView(new Image("/assets/nana.png"));
-        nana.setX(3);
-        nana.setY(165);
-        nana.setFitHeight(55);
-        nana.setFitWidth(26);
+        nana.setX(2);
+        nana.setY(170);
+        nana.setFitHeight(60);
+        nana.setFitWidth(30);
         //Apply animation to nana
         walk(nana);
         
@@ -76,11 +76,11 @@ public class MainView extends Pane
         //Customize the assets of the panes
         border.setArcWidth(10);
         border.setArcHeight(10);
-        border.setOpacity(0.5);
+        border.setOpacity(0.6);
             
-        loseIMG.setFitWidth(784);
+        loseIMG.setFitWidth(930);
         loseIMG.setFitHeight(384);
-        winIMG.setFitWidth(778);
+        winIMG.setFitWidth(930);
         winIMG.setFitHeight(384);
         
         loseScreen.getChildren().addAll(loseIMG, message);
@@ -95,6 +95,19 @@ public class MainView extends Pane
         //add the lanes to the centerview
         setGame();
     }
+    
+    /*********************************************************************
+     * Method to set the main game view
+     *********************************************************************/
+    public void setLane(int lane)
+    {
+        for(int i = 0 ; i < 9 ; i++)
+        {
+            l[i].unglow();
+        }
+        l[lane].glow();
+    }
+    
     
     /*********************************************************************
      * Method to set the main game view
@@ -149,12 +162,12 @@ public class MainView extends Pane
     public void walk(ImageView nana)
     {
         // duration of one move
-        walk.setDuration(Duration.seconds(0.3)); 
+        walk.setDuration(Duration.seconds(0.4)); 
         walk.setCycleCount(0);
          // Make it move 
         walk.setAutoReverse(false);
         // Apply the transition to nana
         walk.setNode(nana); 
-        walk.setByX(91);
+        walk.setByX(110);
     }
 }

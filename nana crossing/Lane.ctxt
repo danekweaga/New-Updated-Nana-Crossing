@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Lane
 comment0.text=\r\n\ @title\ The\ Lane\ Class.\r\n\ It\ includes\ visual\ components\ such\ as\ roads,\ sidewalks,\ and\ animated\ cars.\r\n\ This\ class\ handles\ animating\ cars\ moving\ up\ and\ down\ within\ the\ lane\r\n\r\n\ @author\ Alamn\ Adeleke,\ Chukwunonso\ Ekweaga,\ Ashlee\ Muchirahondo\r\n\ @version\ 1\r\n
-comment1.params=y\ x
-comment1.target=Lane(int,\ int)
+comment1.params=y\ x\ laneNum
+comment1.target=Lane(int,\ int,\ int)
 comment1.text=\r\n\ Constructor\ with\ parameters\ for\ Lane\r\n\ \r\n\ @param\ y\ The\ y-coordinate\ of\ the\ lane\r\n\ @param\ x\ The\ x-coordinate\ of\ the\ lane\r\n
 comment2.params=
 comment2.target=void\ draw()
@@ -13,4 +13,8 @@ comment3.text=\r\n\ Method\ to\ animate\ the\ motion\ of\ the\ cars\ downwards\ 
 comment4.params=car
 comment4.target=void\ animUp(javafx.scene.image.ImageView)
 comment4.text=\r\n\ Method\ to\ animate\ the\ motion\ of\ the\ cars\ upwards\ and\ back\ indefinitely\r\n\ \r\n\ @param\ car\ The\ car\ to\ animate\r\n
-numComments=5
+comment5.params=
+comment5.target=void\ glow()
+comment6.params=
+comment6.target=void\ unglow()
+numComments=7
