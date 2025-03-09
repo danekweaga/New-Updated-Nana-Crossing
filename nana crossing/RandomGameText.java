@@ -154,7 +154,7 @@ public class RandomGameText
      * Method to get a random loss message
      * @return a random funny losing message from the MESSAGES array.
      *******************************************************************************************/
-    public static String outLoss() 
+    public static String getLossMessage() 
     {
         Random random = new Random();
         return(App.getName() + messages[random.nextInt(messages.length)]);
@@ -164,7 +164,7 @@ public class RandomGameText
      * Method to get a granny name
      * @return a random Granny from the NAMES array.
      *******************************************************************************************/
-    public static String out() 
+    public static String getGranName() 
     {
       Random random = new Random();
       return(names[random.nextInt(names.length)]);
