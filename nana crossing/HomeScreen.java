@@ -56,7 +56,7 @@ public class HomeScreen extends Pane
     protected int currentTrackIndex = 0; 
     
     // Random Grandmother names
-    protected RandomGranNames names;
+    protected RandomGameText names;
 
     /************************************************************************
      *Default constructor for HomeScreen
