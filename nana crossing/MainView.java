@@ -132,7 +132,7 @@ public class MainView extends Pane
      ***********************************************************/
     public void setLose()
     {
-        message.setText(LossMessages.out());
+        message.setText(RandomGameText.outLoss());
         this.getChildren().clear();
         this.getChildren().addAll(border, loseScreen);
     }
