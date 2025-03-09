@@ -75,6 +75,8 @@ public class GameScreen extends Pane
     
     /************************************************************************************************
      * Method to update the output to that in the backend
+     * 
+     * This method displays the player's progress in the output pane.
      ************************************************************************************************/        
     public void update()
     {
@@ -82,6 +84,9 @@ public class GameScreen extends Pane
         inputPane.reset.setDisable(!canReset());
     }
     
+    /************************************************************************************************
+     * Method to display input pane in the game
+     ************************************************************************************************/ 
     public Input getInput()
     {
         return inputPane;
