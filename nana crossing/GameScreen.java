@@ -75,6 +75,8 @@ public class GameScreen extends Pane
     
     /************************************************************************************************
      * Method to update the output to that in the backend
+     * 
+     * This method displays the progress thwe player has made int he game
      ************************************************************************************************/        
     public void update()
     {
@@ -83,6 +85,9 @@ public class GameScreen extends Pane
         lanes.setLane(backEnd.getLane());
     }
     
+    /***********************************************************************************************
+     * Method to display the Input pane
+     *********************************************************************************************/
     public Input getInput()
     {
         return inputPane;
@@ -151,6 +156,7 @@ public class GameScreen extends Pane
         timeline.setCycleCount(Timeline.INDEFINITE);
         timeline.play();
     }
+    
     
     /**********************************************************************
      *  Method to stop playing horn sounds
