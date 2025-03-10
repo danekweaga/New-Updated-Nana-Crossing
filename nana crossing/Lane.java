@@ -8,6 +8,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 import javafx.scene.transform.Rotate;
 import javafx.scene.effect.Glow;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.util.Duration;
+
 
 /*************************************************************************************
  * @title The Lane Class.
@@ -90,6 +94,9 @@ public class Lane extends Pane
         //turn the car around
         car2.getTransforms().add(new Rotate(180, 92, 25));
         
+        topBlock.setFill(Color.rgb(115, 168,212));
+        bottomBlock.setFill(Color.rgb(115, 168,212));
+        
         this.getChildren().addAll(road, side, car1, car2, topBlock, bottomBlock);
     }
     
@@ -143,23 +150,41 @@ public class Lane extends Pane
     
     public void glow()
     {
+        
         Glow glow = new Glow();
         glow.setLevel(1); 
         topBlock.setEffect(glow);
         bottomBlock.setEffect(glow);
         
-        topBlock.setFill(Color.rgb(115, 168,212));
-        bottomBlock.setFill(Color.rgb(115, 168,212));
+        
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), event -> 
+        {
+            topBlock.setEffect(glow);
+            bottomBlock.setEffect(glow);
+        }
+        ));
+        timeline.setCycleCount(1);
+        timeline.setAutoReverse(false);
+        timeline.play();
     }
     
     public void unglow()
     {
+        
+        
         Glow glow = new Glow();
         glow.setLevel(0); 
-        topBlock.setEffect(glow);
-        bottomBlock.setEffect(glow);
         
-        topBlock.setFill(Color.rgb(115, 168,212));
-        bottomBlock.setFill(Color.rgb(115, 168,212));
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), event -> 
+        {
+            topBlock.setEffect(glow);
+            bottomBlock.setEffect(glow);
+        }
+        ));
+        timeline.setCycleCount(1);
+        timeline.setAutoReverse(false);
+        timeline.play();
     }
 }
+
+

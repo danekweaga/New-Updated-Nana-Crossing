@@ -90,6 +90,8 @@ public class App extends Application
                 //play the background music
                 scene.homeScreen.playNextTrack();
                 
+                //Change the name of the nana character feild in the home screen
+                scene.homeScreen.nameField.setText(RandomGameText.getGranName());
                 
                 //play a click sound
                 scene.gameScreen.click.seek(scene.gameScreen.click.getStartTime());

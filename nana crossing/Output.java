@@ -16,19 +16,19 @@ public class Output extends Pane
     //background object
     protected Rectangle BG = new Rectangle(-10, 0, 1080, 130);
     //graphical lane indicator
-    protected LaneIndecator laneI = new LaneIndecator(103, 35);
+    protected LaneIndecator laneI = new LaneIndecator(30, 45);
     
-    protected Text laneHeader = new Text(25,35,"Current Lane;");
-    protected Text vBucksHeader = new Text(295,35,"Current VBucks;");
-    protected Text oddsHeader = new Text(600,35,"Odds of ");
-    protected Text failHeader = new Text(680,65,"failure;");
-    protected Text successHeader = new Text(545,65,"success;");
+    protected Text laneHeader = new Text(30 ,40,"Current Lane;");
+    protected Text vBucksHeader = new Text(325,40,"Current VBucks;");
+    protected Text oddsHeader = new Text(630,45,"Odds of ");
+    protected Text failHeader = new Text(660,75,"failure;");
+    protected Text successHeader = new Text(575,75,"success;");
     
     
     //Text lane = new Text(80,70,"Lane 1 of 8");
-    protected Text vBucks = new Text(295,75,"XX VBucks");
-    protected Text failOdds = new Text(690,95,"XX%");
-    protected Text successOdds = new Text(560,95,"XX%");
+    protected Text vBucks = new Text(325,75,"XX VBucks");
+    protected Text failOdds = new Text(720,105,"XX%");
+    protected Text successOdds = new Text(590,105,"XX%");
     
     /****************************************************
      * Default Constructor for the Output Class
@@ -41,16 +41,39 @@ public class Output extends Pane
         BG.setFill(Color.BLACK);
         BG.setOpacity(0.6);
         
-        //Customizing the text objects
-        laneHeader.setFont(new Font(30));
-        vBucksHeader.setFont(new Font(30));
-        oddsHeader.setFont(new Font(30));
-        failHeader.setFont(new Font(30));
-        successHeader.setFont(new Font(30));
-        //lane.setFont(new Font(27));
-        vBucks.setFont(new Font(27));
-        successOdds.setFont(new Font(27));
-        failOdds.setFont(new Font(27));
+        //Customizing the text objects size
+        laneHeader.setFont(new Font(35));
+        vBucksHeader.setFont(new Font(35));
+        oddsHeader.setFont(new Font(35));
+        failHeader.setFont(new Font(35));
+        successHeader.setFont(new Font(35));
+        //lane.setFont(new Font(30));
+        vBucks.setFont(new Font(30));
+        successOdds.setFont(new Font(30));
+        failOdds.setFont(new Font(30));
+        
+        //Customizing the text objects fill color
+        laneHeader.setStroke(Color.rgb(115, 168,212));
+        vBucksHeader.setStroke(Color.rgb(115, 168,212));
+        oddsHeader.setStroke(Color.rgb(115, 168,212));
+        failHeader.setStroke(Color.rgb(115, 168,212));
+        successHeader.setStroke(Color.rgb(115, 168,212));
+        //lane.setStroke(Color.rgb(115, 168,212));
+        vBucks.setStroke(Color.rgb(115, 168,212));
+        successOdds.setStroke(Color.RED.darker());
+        failOdds.setStroke(Color.GREEN.darker());
+        
+        //Customizing the text objects stroke color
+        laneHeader.setFill(Color.rgb(115, 168,212).darker());
+        vBucksHeader.setFill(Color.rgb(115, 168,212).darker());
+        oddsHeader.setFill(Color.rgb(115, 168,212).darker());
+        failHeader.setFill(Color.rgb(115, 168,212).darker());
+        successHeader.setFill(Color.rgb(115, 168,212).darker());
+        //lane.setFill(Color.rgb(115, 168,212).darker());
+        vBucks.setFill(Color.rgb(115, 168,212).darker());
+        successOdds.setFill(Color.RED);
+        failOdds.setFill(Color.GREEN.brighter());
+        
         
         this.getChildren().addAll(BG, /*lane, */laneHeader, vBucks, vBucksHeader, failOdds, successOdds, failHeader, successHeader, oddsHeader, laneI);
     }
