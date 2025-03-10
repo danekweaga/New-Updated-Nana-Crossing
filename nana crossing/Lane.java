@@ -148,39 +148,58 @@ public class Lane extends Pane
         transition.play();
     }
     
+    /****************************************************************************
+     * Methods to apply a glow effect to the top and bottom blocks of the lane over a short time
+     * 
+     ****************************************************************************/
     public void glow()
     {
+        //create the effect
+        Glow glow = new Glow();   
         
-        Glow glow = new Glow();
-        glow.setLevel(1); 
-        topBlock.setEffect(glow);
-        bottomBlock.setEffect(glow);
-        
-        
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), event -> 
+        //Create an animation with
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0), event -> 
         {
+            //a null gloww effect
+            glow.setLevel(0);
+            //applied to the blocks
             topBlock.setEffect(glow);
             bottomBlock.setEffect(glow);
-        }
-        ));
+        }),
+        //then, over 0.2 seconds,
+        new KeyFrame(Duration.seconds(0.2), event -> 
+        {
+            //increase the glow level
+            glow.setLevel(1);
+            //apply the glow effect
+            topBlock.setEffect(glow);
+            bottomBlock.setEffect(glow);
+        }));
+        //play the animation once
         timeline.setCycleCount(1);
         timeline.setAutoReverse(false);
         timeline.play();
     }
     
+    
+    /****************************************************************************
+     * Methods to apply a null glow effect to the top and bottom blocks of the lane after a short time
+     * 
+     ****************************************************************************/
     public void unglow()
     {
+        //create a glow effect
+        Glow glow = new Glow();   
         
-        
-        Glow glow = new Glow();
-        glow.setLevel(0); 
-        
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.3), event -> 
+        //create an animation with
+        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(0.2), event -> 
         {
+            //a null glow effect applied after 0.2 seconds after play
+            glow.setLevel(0); 
             topBlock.setEffect(glow);
             bottomBlock.setEffect(glow);
-        }
-        ));
+        }));
+        //play the animation once
         timeline.setCycleCount(1);
         timeline.setAutoReverse(false);
         timeline.play();
