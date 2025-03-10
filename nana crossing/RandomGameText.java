@@ -10,7 +10,7 @@ import java.util.Random;
 public class RandomGameText
 {
     // Array of losing messages
-        protected static final String[] messages = 
+         protected static final String[] LOSS_MESSAGES = 
     {
         " got turned into ketchup! Better luck next time!",
         " is gone! Haha, now you have no grandma!",
@@ -214,7 +214,7 @@ public class RandomGameText
     };
     
     // Array of Granny messages
-    protected static final String[] names = 
+    protected static final String[] GRANDMA_NAMES = 
     {
         "Grandmother", "Granny", "Nana", "Nanny", "Gram",
         "Grandmom", "Meme", "Oma", "Nonna", "Abuela",
@@ -257,16 +257,16 @@ public class RandomGameText
     public static String getLossMessage() 
     {
         Random random = new Random();
-        return(App.getName() + messages[random.nextInt(messages.length)]);
+        return(App.getName() + LOSS_MESSAGES[random.nextInt(LOSS_MESSAGES.length)]);
     }
     
     /*******************************************************************************************
      * Method to get a granny name
-     * @return a random Granny from the NAMES array.
+     * @return a random Granny from the NAMES array
      *******************************************************************************************/
     public static String getGranName() 
     {
       Random random = new Random();
-      return(names[random.nextInt(names.length)]);
+      return(GRANDMA_NAMES[random.nextInt(GRANDMA_NAMES.length)]);
     }
 }  
