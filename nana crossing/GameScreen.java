@@ -65,18 +65,17 @@ public class GameScreen extends Pane
         BG.setFitWidth(1100);
         BG.setOpacity(0.8);
         
-        //this.setPadding(new Insets(10));
         this.getChildren().addAll(BG, holder);
         update();
         listen();
-        music();
+        loadBackGroundSounds();
     }
     
     
     /************************************************************************************************
      * Method to update the output to that in the backend
      * 
-     * This method displays the progress thwe player has made int he game
+     * This method displays the progress the player has made int he game
      ************************************************************************************************/        
     public void update()
     {
@@ -112,9 +111,9 @@ public class GameScreen extends Pane
     }
     
     /**********************************************************************
-     *  Method to load the horn sounds
+     *  Method to load the background sounds
      **********************************************************************/ 
-    public void music()
+    public void loadBackGroundSounds()
     {
         // Load sound files into MediaPlayer objects
         String[] soundFiles = {"/assets/sounds/horns/horn1.mp3","/assets/sounds/horns/horn2.mp3","/assets/sounds/horns/horn3.mp3",
@@ -133,7 +132,7 @@ public class GameScreen extends Pane
     }
     
     /**********************************************************************
-     *  Method to start playing horn sounds randomly
+     *  Method to start playing background sounds randomly
      **********************************************************************/ 
     public void startPlayingSounds() 
     {
@@ -159,7 +158,7 @@ public class GameScreen extends Pane
     
     
     /**********************************************************************
-     *  Method to stop playing horn sounds
+     *  Method to stop playing background sounds
      **********************************************************************/    
     public void stopPlayingSounds() 
     {
