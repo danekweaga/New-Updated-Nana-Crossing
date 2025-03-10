@@ -106,7 +106,9 @@ public class GameScreen extends Pane
         return can;
     }
     
-    //methods to play horn sounds randomly
+    /**********************************************************************
+     *  Method to load the horn sounds
+     **********************************************************************/ 
     public void music()
     {
         // Load sound files into MediaPlayer objects
@@ -125,6 +127,9 @@ public class GameScreen extends Pane
         }
     }
     
+    /**********************************************************************
+     *  Method to start playing horn sounds randomly
+     **********************************************************************/ 
     public void startPlayingSounds() 
     {
         //only if the timeline is null, (to avoid multiple instances)
