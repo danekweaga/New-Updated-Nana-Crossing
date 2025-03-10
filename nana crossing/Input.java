@@ -24,7 +24,7 @@ public class Input extends Pane
     
     //Instance of the buttons(action methods found in GameScreen Class)
     ImageView cross = new ImageView(new Image("/assets/cross.png"));
-    ImageView stop = new ImageView(new Image("/assets/call warden.png"));
+    ImageView stop = new ImageView(new Image("/assets/stop.png"));
     ImageView reset = new ImageView(new Image("/assets/reset.png"));
        
     
