@@ -21,7 +21,7 @@ public class Output extends Pane
     protected Text laneHeader = new Text(30 ,40,"Current Lane;");
     protected Text vBucksHeader = new Text(325,40,"Current VBucks;");
     protected Text oddsHeader = new Text(630,45,"Odds of ");
-    protected Text failHeader = new Text(660,75,"failure;");
+    protected Text failHeader = new Text(710,75,"failure;");
     protected Text successHeader = new Text(575,75,"success;");
     
     
@@ -64,11 +64,11 @@ public class Output extends Pane
         failOdds.setStroke(Color.GREEN.darker());
         
         //Customizing the text objects stroke color
-        laneHeader.setFill(Color.rgb(115, 168,212).darker());
-        vBucksHeader.setFill(Color.rgb(115, 168,212).darker());
-        oddsHeader.setFill(Color.rgb(115, 168,212).darker());
-        failHeader.setFill(Color.rgb(115, 168,212).darker());
-        successHeader.setFill(Color.rgb(115, 168,212).darker());
+        laneHeader.setFill(Color.rgb(115, 168, 212).darker());
+        vBucksHeader.setFill(Color.rgb(115, 168, 212).darker());
+        oddsHeader.setFill(Color.rgb(115, 168, 212).darker());
+        failHeader.setFill(Color.rgb(115, 168, 212).darker());
+        successHeader.setFill(Color.rgb(115, 168, 212).darker());
         //lane.setFill(Color.rgb(115, 168,212).darker());
         vBucks.setFill(Color.rgb(115, 168,212).darker());
         successOdds.setFill(Color.RED);

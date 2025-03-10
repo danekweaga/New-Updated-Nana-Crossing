@@ -73,7 +73,7 @@ public class HomeScreen extends Pane
      *************************************************************/
     public void draw()
     {
-        //Customize the assets of the Home page        
+        //Customize the assets of the Home page
         playB.setLayoutX(60);
         playB.setLayoutY(260);
         playB.setFitWidth(35);
@@ -101,12 +101,12 @@ public class HomeScreen extends Pane
         holder1.setOpacity(0.75);
         holder1.setArcWidth(20);
         holder1.setArcHeight(20);
-        holder1.setFill(Color.CORNFLOWERBLUE.darker());
+        holder1.setFill(Color.rgb(115, 168, 212));
         holder2 = new Rectangle(20,170,120,140);
         holder2.setOpacity(0.75);
         holder2.setArcWidth(20);
         holder2.setArcHeight(20);
-        holder2.setFill(Color.CORNFLOWERBLUE.darker());
+        holder2.setFill(Color.rgb(115, 168, 212));
         
         setB.setLayoutX(368);
         setB.setLayoutY(190);
