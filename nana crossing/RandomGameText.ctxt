@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=RandomGameText
+comment0.text=\r\n\ @title\ The\ RandomGameText\ Class\r\n\ The\ RandomGameText\ class\ contains\ a\ collection\ of\ funny\ losing\ messages\ and\ a\ method\ to\ print\ a\ random\ one.\r\n\ The\ RandomGameText\ class\ contains\ a\ differrent\ ways\ of\ saying\ grandma\ and\ a\ method\ to\ print\ a\ random\ one.\r\n\r\n\ @authors\ Chukwunonso\ Ekweaga,\ Ashlee\ Muichirahondo\ and\ Alamin\ Adeleke\r\n
+comment1.params=
+comment1.target=java.lang.String\ getLossMessage()
+comment1.text=\r\n\ Method\ to\ get\ a\ random\ loss\ message\r\n\ @return\ a\ random\ funny\ losing\ message\ from\ the\ MESSAGES\ array.\r\n
+comment2.params=
+comment2.target=java.lang.String\ getGranName()
+comment2.text=\r\n\ Method\ to\ get\ a\ granny\ name\r\n\ @return\ a\ random\ Granny\ from\ the\ NAMES\ array\r\n
+numComments=3

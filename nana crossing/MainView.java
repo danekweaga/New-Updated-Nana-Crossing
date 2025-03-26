@@ -97,14 +97,16 @@ public class MainView extends Pane
     }
     
     /*********************************************************************
-     * Method to set the main game view
+     * Method to set the lane highlighted
      *********************************************************************/
     public void setLane(int lane)
     {
+        //Set all of them off
         for(int i = 0 ; i < 9 ; i++)
         {
             l[i].unglow();
         }
+        //Turn on the one that matche the input
         l[lane].glow();
     }
     
@@ -150,7 +152,7 @@ public class MainView extends Pane
         // Make it move back and forth
         walk.setAutoReverse(false); // Make it move back and forth
         // Apply the transition to the rectangle
-        walk.setNode(nana); 
+        walk.setNode(nana);
         walk.setByX(distance * -1);
         walk.play();
     }

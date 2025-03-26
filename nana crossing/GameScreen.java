@@ -181,11 +181,15 @@ public class GameScreen extends Pane
      *  Method to reset the game to starting state
      **********************************************************************/
     public void reset()
-    {        
-        gameWon = false;
-        lanes.setGame();
-        lanes.reset();
+    {
+        //Resetting variables
         canCross = true;
+        gameWon = false;
+        //Reset the screen
+        lanes.setGame();
+        //reset the nanas position
+        lanes.reset();
+        //Enable the appropriate buttons
         inputPane.cross.setDisable(false);
         inputPane.cross.setOpacity(1.0);
         inputPane.stop.setDisable(false);
@@ -197,60 +201,60 @@ public class GameScreen extends Pane
      ***************************************************************************/    
     public void listen()
     {
-    //Events for when the cross button is clicked
-    inputPane.cross.setOnMouseClicked(e ->
-    {
-        //if on the final lane
-        if(backEnd.lane == 8)
+        //Events for when the cross button is clicked
+        inputPane.cross.setOnMouseClicked(e ->
         {
-            gameWon = true;
-            lanes.setWin();
-            disableAllButtonsExceptReset();
-            //play victory sound effect
-            win.seek(win.getStartTime());
-            win.play();
-        }
-        
-        //if player hasn't lost, and successfully crossed
-        if(backEnd.cross() && canCross)
-        {
-            //play click sound
-            click.seek(click.getStartTime());
-            click.play();
-            //play nana walking animation
-            lanes.walk.play();
-            lanes.distance += 110;
-            //go to the next lane
-            backEnd.update();
-            //If on the final lane
+            //if on the final lane
             if(backEnd.lane == 8)
             {
-                //display win
-                lanes.setWin();
                 gameWon = true;
+                lanes.setWin();
                 disableAllButtonsExceptReset();
                 //play victory sound effect
                 win.seek(win.getStartTime());
                 win.play();
             }
-        }
-        //else if the game has not already been won yet, display the losing screen
-        else if(!gameWon)
-        {
-            //play losing sound effect
-            lose.seek(lose.getStartTime());
-            lose.play();
             
-            //set the losing screen
-            lanes.setLose();
-            canCross = false;
-            disableAllButtonsExceptReset();
-        }
-        //update the output
-        update();
-    });
-        
-          //Events for when the call warden button is clicked
+            //if player hasn't lost, and successfully crossed
+            if(backEnd.cross() && canCross)
+            {
+                //play click sound
+                click.seek(click.getStartTime());
+                click.play();
+                //play nana walking animation
+                lanes.walk.play();
+                lanes.distance += 110;
+                //go to the next lane
+                backEnd.update();
+                //If on the final lane
+                if(backEnd.lane == 8)
+                {
+                    //display win
+                    lanes.setWin();
+                    gameWon = true;
+                    disableAllButtonsExceptReset();
+                    //play victory sound effect
+                    win.seek(win.getStartTime());
+                    win.play();
+                }
+            }
+            //else if the game has not already been won yet, display the losing screen
+            else if(!gameWon)
+            {
+                //play losing sound effect
+                lose.seek(lose.getStartTime());
+                lose.play();
+                
+                //set the losing screen
+                lanes.setLose();
+                canCross = false;
+                disableAllButtonsExceptReset();
+            }
+            //update the output
+            update();
+        });
+            
+        //Events for when the call warden button is clicked
         inputPane.stop.setOnMouseClicked(e ->
         {
             //If the game is still in session,
@@ -334,10 +338,11 @@ public class GameScreen extends Pane
      ***********************************************************************************/
     public void disableAllButtonsExceptReset() 
     {
+        //disable the button and change its appearance to indicate
         inputPane.cross.setDisable(true);
         inputPane.cross.setOpacity(0.5);
         inputPane.stop.setDisable(true);
         inputPane.stop.setOpacity(0.5);
     }
-    }
+}
     
