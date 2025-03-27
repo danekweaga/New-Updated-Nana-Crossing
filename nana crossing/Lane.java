@@ -41,8 +41,8 @@ public class Lane extends Pane
     protected ImageView car2;
     protected ImageView end;
     
-    Rectangle topBlock = new Rectangle(x, y, 112, 50);
-    Rectangle bottomBlock = new Rectangle(x, y + 334, 112, 50);
+    Rectangle topBlock = new Rectangle(x, y, 112, 46);
+    Rectangle bottomBlock = new Rectangle(x, y + 338, 112, 46);
     
     /*******************************************************************
      * Constructor with parameters for Lane
@@ -124,7 +124,7 @@ public class Lane extends Pane
     }
     
     /*******************************************************************************************************
-     * Method to animate the motion of the cars upwards and back indefinitely
+     * Method to flip the car then animate the motion of the cars upwards and back indefinitely
      * 
      * @param car The car to animate
      *******************************************************************************************************/   
@@ -182,10 +182,10 @@ public class Lane extends Pane
     }
     
     
-    /****************************************************************************
+    /**************************************************************************************************
      * Methods to apply a null glow effect to the top and bottom blocks of the lane after a short time
      * 
-     ****************************************************************************/
+     **************************************************************************************************/
     public void unglow()
     {
         //create a glow effect

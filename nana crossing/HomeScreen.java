@@ -1,19 +1,6 @@
-import javafx.scene.layout.Pane;
-import javafx.scene.control.Button;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.Image;
-import javafx.scene.Scene;
-import javafx.scene.text.Text;
-import javafx.scene.shape.Rectangle;
-import javafx.scene.paint.Color;
-import javafx.scene.control.TextField;
-import javafx.scene.effect.Glow;
-import javafx.scene.text.Font;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import javafx.scene.layout.Pane; import javafx.scene.control.Button; import javafx.scene.image.ImageView; import javafx.scene.image.Image; import javafx.scene.Scene; import javafx.scene.text.Text; import javafx.scene.shape.Rectangle;
+import javafx.scene.paint.Color; import javafx.scene.control.TextField; import javafx.scene.effect.Glow; import javafx.scene.text.Font; import javafx.scene.media.Media; import javafx.scene.media.MediaPlayer; 
+import java.io.File; import java.util.ArrayList; import java.util.List;
 
 /*****************************************************************************************************************
  * @title The HomeScreen class.
@@ -72,7 +59,7 @@ public class HomeScreen extends Pane
      * Method to draw the HomeScreen
      *************************************************************/
     public void draw()
-    {
+    {        
         //Customize the assets of the Home page
         playB.setLayoutX(60);
         playB.setLayoutY(260);
@@ -290,8 +277,6 @@ public class HomeScreen extends Pane
 
     /*******************************************************************************************************
      * Method to stop music
-     * 
-     * Stop the background music
      *******************************************************************************************************/
     public void stopMusic() 
     {

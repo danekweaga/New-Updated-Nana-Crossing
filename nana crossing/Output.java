@@ -20,15 +20,15 @@ public class Output extends Pane
     
     protected Text laneHeader = new Text(30 ,40,"Current Lane;");
     protected Text vBucksHeader = new Text(325,40,"Current VBucks;");
-    protected Text oddsHeader = new Text(630,45,"Odds of ");
-    protected Text failHeader = new Text(710,75,"failure;");
-    protected Text successHeader = new Text(575,75,"success;");
+    protected Text oddsHeader = new Text(690,45,"Odds of ");
+    protected Text failHeader = new Text(780,75,"failure;");
+    protected Text successHeader = new Text(650,75,"success;");
     
     
     //Text lane = new Text(80,70,"Lane 1 of 8");
     protected Text vBucks = new Text(325,75,"XX VBucks");
-    protected Text failOdds = new Text(720,105,"XX%");
-    protected Text successOdds = new Text(590,105,"XX%");
+    protected Text failOdds = new Text(785,105,"XX%");
+    protected Text successOdds = new Text(660,105,"XX%");
     
     /****************************************************
      * Default Constructor for the Output Class
@@ -60,8 +60,8 @@ public class Output extends Pane
         successHeader.setStroke(Color.rgb(115, 168,212));
         //lane.setStroke(Color.rgb(115, 168,212));
         vBucks.setStroke(Color.rgb(115, 168,212));
-        successOdds.setStroke(Color.RED.darker());
-        failOdds.setStroke(Color.GREEN.darker());
+        failOdds.setStroke(Color.RED.darker());
+        successOdds.setStroke(Color.GREEN.darker());
         
         //Customizing the text objects stroke color
         laneHeader.setFill(Color.rgb(115, 168, 212).darker());
@@ -71,8 +71,8 @@ public class Output extends Pane
         successHeader.setFill(Color.rgb(115, 168, 212).darker());
         //lane.setFill(Color.rgb(115, 168,212).darker());
         vBucks.setFill(Color.rgb(115, 168,212).darker());
-        successOdds.setFill(Color.RED);
-        failOdds.setFill(Color.GREEN.brighter());
+        failOdds.setFill(Color.RED);
+        successOdds.setFill(Color.GREEN.brighter());
         
         
         this.getChildren().addAll(BG, /*lane, */laneHeader, vBucks, vBucksHeader, failOdds, successOdds, failHeader, successHeader, oddsHeader, laneI);
