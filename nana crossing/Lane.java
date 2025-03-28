@@ -24,7 +24,7 @@ import javafx.util.Duration;
 public class Lane extends Pane
 {
     //An array of file locations of car graphics
-    protected String[] cars = {"/assets/car1.png", "/assets/car2.png", "/assets/car3.png", "/assets/car4.png", "/assets/car5.png", "/assets/car6.png" };
+    protected String[] cars = {"/assets/car1.png", "/assets/car2.png", "/assets/car3.png", "/assets/car4.png", "/assets/car5.png", "/assets/car6.png", "/assets/car7.png", "/assets/car8.png", "/assets/car9.png", "/assets/car10.png", "/assets/car11.png"};
     
     //instance data
     protected Random rNG = new Random();
