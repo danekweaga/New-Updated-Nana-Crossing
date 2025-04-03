@@ -19,10 +19,7 @@ public class GameLogic
     /*******************************************
      * Default constructor for GameLogic
      *******************************************/
-    public GameLogic()
-    {
-        reset();
-    }
+    public GameLogic() { reset(); }
     
     /*************************************************
      * Method to update game state(cross a lane)
@@ -51,9 +48,9 @@ public class GameLogic
     }
     
     //Accesor methods to return instance data
-    public int getLane()    {return lane;}
-    public int getVBucks()  {return vBucks;}
-    public double getOdds()    {return odds;}
+    public int getLane()     {return lane;}
+    public int getVBucks()   {return vBucks;}
+    public double getOdds()  {return odds;}
     
     /***********************************************************************************
      * Method to check if crossing is successful based on probability
