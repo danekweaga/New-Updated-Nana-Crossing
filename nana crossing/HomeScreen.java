@@ -23,7 +23,7 @@ public class HomeScreen extends Pane
     protected Text t5 = new Text(436,290, "VBucks");
     protected Text t6 = new Text(400,299, "Settings");
     
-    protected Rectangle holder1,holder2;
+    protected Rectangle holder1, holder2;
      
     protected Media clickSound = new Media(getClass().getResource("/assets/sounds/click.mp3").toExternalForm());
     protected MediaPlayer click = new MediaPlayer(clickSound);
@@ -112,17 +112,23 @@ public class HomeScreen extends Pane
      **********************************************/
     public void setFunc()
     {
+        //Empty the home screen
         this.getChildren().clear();
+        //Add all the prior elements
         this.getChildren().addAll(BG, holder1 , holder2, t1, t2, t3, t4, t5, nameField, oddsField, payField, playB,doneB);
+        //customize the button
         doneB.setLayoutX(368);
         doneB.setLayoutY(289);
         doneB.setFitWidth(100);
         doneB.setFitHeight(100);
         glow(doneB);//400,299
+        //When the done button is clicked,
         doneB.setOnMouseClicked(e->
         {
+            //Play click sound effect
             click.seek(click.getStartTime());
             click.play();
+            //clear the pane to add only what should be added
             this.getChildren().clear();
             this.getChildren().addAll(BG,holder1 ,holder2, t1, nameField,playB,setB,t6);
         });
