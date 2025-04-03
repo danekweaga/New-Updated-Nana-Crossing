@@ -32,7 +32,7 @@ public class GameLogic
         //If there are still lanes left to cross
         if(lane<8)
         {
-            //increment the relevant data based on 
+            //increment the relevant data based on static variables accesor methods
             lane++;
             vBucks += App.getPay();
             odds -= App.getOdds();
