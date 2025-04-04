@@ -5,13 +5,13 @@ import javafx.scene.layout.Pane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 
-/**********************************************************************************
+/***********************************************************************************
  * @ The App Class
  * The main app class
  *
  * @author Alamn Adeleke, Chukwunonso Ekweaga, Ashlee Muchirahondo
  * @version 1
- *********************************************************************************/
+ **********************************************************************************/
 public class App extends Application
 {
     //static Variables used by the whole program
