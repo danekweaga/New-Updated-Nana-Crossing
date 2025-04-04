@@ -22,9 +22,9 @@ public class App extends Application
     //customized scene class
     protected ChangingScene scene = new ChangingScene();
     
-    /**************************************
+    /********************************************
      * Method to start the application
-     *************************************/
+     *******************************************/
     public void start(Stage stage)  
     { 
         stage.setScene(scene);
