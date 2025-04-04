@@ -5,7 +5,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.Image;
 
-/*********************************************************************************
+/**********************************************************************************
  * @ The App Class
  * The main app class
  *
