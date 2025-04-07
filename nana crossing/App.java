@@ -17,7 +17,7 @@ public class App extends Application
     //static Variables used by the whole program
     protected static int pay;
     protected static double odds;
-    public static String name;
+    protected static String name;
     
     //customized scene class
     protected ChangingScene scene = new ChangingScene();
