@@ -134,15 +134,9 @@ public class App extends Application
     //Accesor methods to get the instance data of the class
     //(Used mainly in the GameLogic class)
     public static int getPay()
-    {
-        return pay;
-    }
+    {return pay;}
     public static String getName()
-    {
-        return name;
-    }
+    {return name;}
     public static double getOdds()
-    {
-        return odds;
-    }
+    {return odds;}
 }
