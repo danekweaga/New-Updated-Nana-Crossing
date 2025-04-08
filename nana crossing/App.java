@@ -119,17 +119,11 @@ public class App extends Application
     //Mutator methods to set the instance data of the class
     //(Used mainly in the homescreen class)
     public static void setPay(int set)
-    {
-        pay = set;
-    }
+    {pay = set;}
     public static void setOdds(double set)
-    {
-        odds = set;
-    }
+    {odds = set;}
     public static void setName(String set)
-    {
-        name = set;
-    }
+    {name = set;}
     
     //Accesor methods to get the instance data of the class
     //(Used mainly in the GameLogic class)
