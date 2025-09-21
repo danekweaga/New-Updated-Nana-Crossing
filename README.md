@@ -1,5 +1,7 @@
 # Nana's Crossing 🚗👵
 
+> **📹 [Watch the 5-minute demo video here](<iframe src="https://unbcloud-my.sharepoint.com/personal/n3r9a_unb_ca/_layouts/15/embed.aspx?UniqueId=923648f0-1b58-4f9f-9864-14e266294dac&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Watch Out Nana Game Guide.mp4"></iframe>)**
+
 **Help Nana cross the dangerous highway in this thrilling risk-vs-reward game!**
 
 A strategic probability-based game where players guide a grandmother across an eight-lane highway while making critical decisions about when to cash out their earnings. Perfect for streamers and interactive gameplay!
@@ -190,16 +192,6 @@ We welcome contributions! Please feel free to:
 - Suggest new features
 - Submit pull requests
 - Share gameplay feedback
-
-## 📜 License
-
-This project is part of CS 1083 coursework. Please respect academic integrity guidelines when using or referencing this code.
-
-## 🎉 Acknowledgments
-
-Special thanks to our CS 1083 instructor and classmates for their support and feedback throughout development.
-
----
 
 **Ready to help Nana cross the road? Clone the repo and start your crossing adventure today!** 🚗👵✨
 
