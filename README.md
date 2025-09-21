@@ -1,6 +1,6 @@
 # Nana's Crossing 🚗👵
 
-> **📹 [Watch the 5-minute demo video here](<iframe src="https://unbcloud-my.sharepoint.com/personal/n3r9a_unb_ca/_layouts/15/embed.aspx?UniqueId=923648f0-1b58-4f9f-9864-14e266294dac&embed=%7B%22ust%22%3Atrue%2C%22hv%22%3A%22CopyEmbedCode%22%7D&referrer=StreamWebApp&referrerScenario=EmbedDialog.Create" width="640" height="360" frameborder="0" scrolling="no" allowfullscreen title="Watch Out Nana Game Guide.mp4"></iframe>)**
+> **📹 [Watch the 5-minute demo video here](https://unbcloud-my.sharepoint.com/personal/n3r9a_unb_ca/_layouts/15/stream.aspx?id=%2Fpersonal%2Fn3r9a_unb_ca%2FDocuments%2FWatch+Out+Nana+Game+Guide.mp4&referrer=StreamWebApp.Web&referrerScenario=AddressBarCopied.view.631ca4bd-de08-4626-8ef9-220e27a7492b&startedResponseCatch=true)**
 
 **Help Nana cross the dangerous highway in this thrilling risk-vs-reward game!**
 
